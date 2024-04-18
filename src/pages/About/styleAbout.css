@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+
+.about {
+    background-color: #00ADB5;
+    height: 100vh;
+    object-fit: cover;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.about img {
+    object-fit: cover;
+    height: 266px;
+    width: 500px;
+    margin-top: 0;
+
+}
+
+.textBold1 {
+    font-weight: 700;
+    font-size: 48px;
+    color: #FFFFFF;
+    font-family: "Girassol", serif;
+
+}
+
+.text1 {
+    font-weight: 700;
+    font-size: 32px;
+}
+h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.paragraphe {
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    line-height: 32px;
+}
+.textBold {
+    font-weight: 700;
+    font-size: 24px;
+    color: black;
+}
+p {
+    border: 2px solid #fff;
+    color: black;
+    padding: 10px;
+    font-size: 20px ;
+    line-height: 40px;
+    font-weight: 600;
+
+}
+p > a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.text1 {
+    color: black;
+    font-size: 32px;
+}

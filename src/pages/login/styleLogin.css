@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+
+.login {
+    background-image: url(https://picsum.photos/1600/900);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.LoginInput {
+    display: flex;
+    height: 600px;
+    width: 600px;
+    background-attachment: fixed;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(98, 169, 150, 0.5);
+    border-radius: 50%;
+    padding-top: 30px;
+    border: 2px solid #fff;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
+
+h3 {
+    font-family: "Girassol", serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #FFF;
+    margin-top: 10px ;
+}
+
+Form {
+    border: none;
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;	
+
+}
+
+.emailpw {
+    background-color: rgb(15, 49, 45, 0.4);
+    text-align: center;
+    font-family: "Girassol", serif;
+    font-size: 32px;
+    color: rgba(177, 176, 171, 0.9);
+    height: 60px;
+    width: 250px;
+    border-radius: 10px;
+
+}
+  .log {
+    color: #fff;
+  }
+
+  Form.Control {
+    text-align: center;
+  }

@@ -1,10 +1,8 @@
-import Navbar from "../../components/Navbar/Navbar"
 import coding from '../../assets/coding.svg'
 import './styleAbout.css'
 function About() {
     return (
         <div >
-            <Navbar />
             <div className="about">
                 <div>
                     <img src={coding} alt="coding" />

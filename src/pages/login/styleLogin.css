@@ -38,12 +38,12 @@ h3 {
     margin-top: 10px ;
 }
 
-Form {
+#form {
     border: none;
     display: flex;
 flex-direction: column;
 justify-content: center;
-align-items: center;	
+align-items: center;
 
 }
 

@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import Navbar from '../../components/Navbar/Navbar'
+import { useState } from 'react'
 import './styleLogin.css'
 import { Form } from 'react-bootstrap';
 import meal from '../../assets/meal.svg'
@@ -21,12 +20,11 @@ function Login() {
     }
     return (
         <div>
-            <Navbar />
             <div className='login'>
                 <div className='LoginInput'>
                     <img src={meal} alt="meal login" />
                     <h3>Clarusway Recipe</h3>
-                    <Form onSubmit={handleSubmit}>
+                    <Form onSubmit={handleSubmit} id='form'>
                         <Form.Group className="mb-1 emailpw" controlId="Email" >
 
                             <Form.Control className="mb-1 emailpw" placeholder='USERNAME' type="email" value={email} onChange={(e) => setEmail(e.target.value)} />

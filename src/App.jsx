@@ -1,11 +1,11 @@
-
-import './App.css'
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/home/Home';
 import { RecipeProvider } from './context/RecipeContext';
-import Login from '../src/pages/login/Login'
+import Login from './pages/login/Login';
 import About from './pages/About/About';
+import Not_Found from '../src/pages/Not-Found/Not_Found'
 
 function App() {
   return (
@@ -13,11 +13,14 @@ function App() {
       <Router>
         <RecipeProvider>
           <Switch>
-            <Route path="/"  element={Home} />
+            <Route path="/" element={Login} />
+            <Route path="/Home" element={Home} />
+            <Route path="/about" element={About} />
+            <Route path='*'  element={Not_Found} />
           </Switch>
         </RecipeProvider>
       </Router>
-/    </>
+    </>
   );
 }
 

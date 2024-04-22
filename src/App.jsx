@@ -5,17 +5,19 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/home/Home';
 import { RecipeProvider } from './context/RecipeContext';
 import Login from '../src/pages/login/Login'
+import About from './pages/About/About';
 
 function App() {
   return (
     <>
-      <Router>
+      {/* <Router>
         <RecipeProvider>
           <Switch>
-            <Route path="/" exact component={Home} />
+            <Route path="/"  element={Home} />
           </Switch>
         </RecipeProvider>
-      </Router>
+      </Router> */}
+      <Login/>
 /    </>
   );
 }

@@ -2,11 +2,14 @@ import { useState } from 'react'
 import './styleLogin.css'
 import { Form } from 'react-bootstrap';
 import meal from '../../assets/meal.svg'
-// import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    const history = useHistory();
+
     function validateForm() {
 
         return email.length > 0 && password.length > 0;
@@ -32,9 +35,9 @@ function Login() {
                         <br />
                         <Form.Group className="mb-2 emailpw" controlId="password">
 
-                            <Form.Control className="mb-2 emailpw" controlId="password" type="password" placeholder='PASSWORD'  value={password} onChange={(e) => setPassword(e.target.value)} />
+                            <Form.Control className="mb-2 emailpw" controlId="password" type="password" placeholder='PASSWORD' value={password} onChange={(e) => setPassword(e.target.value)} />
                         </Form.Group>
-                        <a href='#' type="submit"  className='emailpw log' disabled={!validateForm()} >Login</a>
+                        <a href='#' type="submit" className='emailpw log' disabled={!validateForm()} >Login</a>
                     </Form>
                 </div>
             </div>

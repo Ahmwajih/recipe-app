@@ -1,21 +1,21 @@
+import { Link } from 'react-router-dom';
+import './styleNav.css';
 
-import './styleNav.css'
 function Navbar() {
   return (
     <div className='nav'>
       <div>
-        <a href="#">
-
+        <Link to="/" className='nav-link'>
           <span className='clarus'>CLARUSWAY</span> <span className='recipe'>RECIPE</span>
-        </a>
+        </Link>
       </div>
       <div className='about-nav'>
-        <a href="#">ABOUT</a>
-        <a href="https://github.com/Ahmwajih">GITHUB</a>
-        <a href="#">LOGOUT</a>
+        <Link to="/about" className='nav-link'>ABOUT</Link>
+        <a href="https://github.com/Ahmwajih" className='nav-link' target="_blank" rel="noopener noreferrer">GITHUB</a>
+        <Link to="/logout" className='nav-link'>LOGOUT</Link>
       </div>
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

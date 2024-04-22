@@ -10,14 +10,13 @@ import About from './pages/About/About';
 function App() {
   return (
     <>
-      {/* <Router>
+      <Router>
         <RecipeProvider>
           <Switch>
             <Route path="/"  element={Home} />
           </Switch>
         </RecipeProvider>
-      </Router> */}
-      <Login/>
+      </Router>
 /    </>
   );
 }

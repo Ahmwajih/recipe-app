@@ -1,11 +1,16 @@
-import coding from "../../assets/coding.svg";
+import codingImage from "../../assets/coding.svg";
+import Navbar from "../../components/Navbar/Navbar";
 import "./styleAbout.css";
+
+import { useNavigate } from "react-router-dom";
+
 function About() {
   return (
     <div>
+      <Navbar/>
       <div className="about">
         <div>
-          <img src={coding} alt="coding" />
+          <img src={codingImage} alt="coding" />
         </div>
         <h3 className="text1">
           About Software Developer <span className="textBold1">Ben Smida</span>

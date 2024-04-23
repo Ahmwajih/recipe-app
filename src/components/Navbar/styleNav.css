@@ -29,11 +29,12 @@
     color: #02475E;
 }
 
-a {
+.nav-link {
     text-decoration: none;
     margin: 10px 20px;
     text-align: center;
     cursor: pointer;
+    display: inline;
 }
 
 

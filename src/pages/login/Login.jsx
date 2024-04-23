@@ -1,25 +1,30 @@
 import { useState } from "react";
 import "./styleLogin.css";
-import { Form } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap"; // Import Button from react-bootstrap
 import meal from "../../assets/meal.svg";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../../components/Navbar/Navbar";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const history = useHistory();
+  const history = useNavigate();
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
   }
+
   function handleSubmit(event) {
     event.preventDefault();
-    history.push("/Home");
+    history.push("/");
   }
+
   return (
     <div>
-      <div className="login">
+    <Navbar/>
+    <div>
+    <div className="login">
         <div className="LoginInput">
           <img src={meal} alt="meal login" />
           <h3>Clarusway Recipe</h3>
@@ -44,17 +49,19 @@ function Login() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
-            <a
-              href="#"
+            {/* Use Button component or standard button element for submit */}
+            <Button
+              variant="primary"
               type="submit"
               className="emailpw log"
               disabled={!validateForm()}
             >
               Login
-            </a>
+            </Button>
           </Form>
         </div>
       </div>
+    </div>
     </div>
   );
 }

@@ -2,16 +2,18 @@ import "./StyleHeader.css";
 import { useRecipeContext } from "../../context/RecipeContext";
 
 function FormAdd() {
-  const { searchInput, mealType, setSearchInput, setMealType } =
+  const { searchInput, mealType, setSearchInput, setMealType, getAPI} =
     useRecipeContext();
 
   const intialValue = {
     setSearchInput: "",
-    mealType: mealType[0].toLocaleLowerCase(),
+    mealType: '',
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    getAPI()
+
   };
   return (
     <div className="search">
@@ -38,7 +40,7 @@ function FormAdd() {
             id="food"
             value={mealType}
             onChange={(e) => setMealType(e.target.value)}
-          >
+            >
             <option value="Breakfast">Breakfast</option>
             <option value="Lunch">Lunch</option>
             <option value="dinner">dinner</option>

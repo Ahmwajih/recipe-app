@@ -1,14 +1,11 @@
-
-function RecipeCard(recipes) {
+function RecipeCard({ recipe }) {  // Accept recipe as a prop
   return (
-<div className="recipe-list">
-      {recipes.map((recipe, index) => (
-        <div key={index} className="recipe-card">
-          <h2>{recipe.recipe.label}</h2>
-          <img src={recipe.recipe.image} alt={recipe.recipe.label} />
-        </div>
-      ))}
-    </div>  )
+    <div className="recipe-card">
+      <h2>{recipe.label}</h2>
+      <img src={recipe.image} alt={recipe.label} />
+    </div>
+  );
 }
 
-export default RecipeCard
+export default RecipeCard;
+

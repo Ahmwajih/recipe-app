@@ -6,12 +6,12 @@ function Navbar() {
     <div className="nav">
       <div>
         <Link to="/Home" className="nav-link">
-          <span className="clarus">CLARUSWAY</span>{" "}
+          <span className="clarus">CLARUSWAY</span> {'  '}
           <span className="recipe">RECIPE</span>
         </Link>
       </div>
       <div className="about-nav">
-        <Link to="/about" className="nav-link">
+      <Link to="/about" className="nav-link">
           ABOUT
         </Link>
         <a
@@ -22,7 +22,7 @@ function Navbar() {
         >
           GITHUB
         </a>
-        <Link to="/logout" className="nav-link">
+        <Link to="/" className="nav-link">
           LOGOUT
         </Link>
       </div>

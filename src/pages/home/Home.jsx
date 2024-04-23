@@ -1,6 +1,5 @@
 import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
-import RecipeCard from "./RecipeCard";
 import { useRecipeContext } from "../../context/RecipeContext";
 
 function Home() {
@@ -9,10 +8,11 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <Header />
-      <RecipeCard recipes={recipes} />
+      <Header recipes={recipes} />
     </div>
   );
 }
 
 export default Home;
+
+

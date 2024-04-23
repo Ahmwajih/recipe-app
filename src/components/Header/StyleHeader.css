@@ -54,3 +54,17 @@ h1 {
     font-size: 48px;
     font-weight: 700;
 }
+
+
+.recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px; 
+  }
+  
+  .recipe-card-container {
+    flex: 0 0 20%;
+    margin: 5px;
+  }
+  

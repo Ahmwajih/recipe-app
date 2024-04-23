@@ -1,7 +1,7 @@
 import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
-import RecipeCard from './RecipeCard';
-import { useRecipeContext } from '../../context/RecipeContext';
+import RecipeCard from "./RecipeCard";
+import { useRecipeContext } from "../../context/RecipeContext";
 
 function Home() {
   const { recipes } = useRecipeContext();

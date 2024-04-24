@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./styleLogin.css";
-import { Form, Button } from "react-bootstrap"; // Import Button from react-bootstrap
+import { Form, Button } from "react-bootstrap";
 import meal from "../../assets/meal.svg";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
@@ -9,7 +9,7 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const history = useNavigate();
+  const navigate = useNavigate(); // Utilisation correcte de useNavigate
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
@@ -17,14 +17,19 @@ function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    history.push("/");
+    // Vérification du login et du mot de passe
+    // Si c'est valide, on navigue vers la page d'accueil
+    if (email === "votre_email" && password === "votre_mot_de_passe") {
+      navigate("/Home");
+    } else {
+      alert("Login ou mot de passe incorrect !");
+    }
   }
 
   return (
     <div>
-    <Navbar/>
-    <div>
-    <div className="login">
+      <Navbar />
+      <div className="login">
         <div className="LoginInput">
           <img src={meal} alt="meal login" />
           <h3>Clarusway Recipe</h3>
@@ -33,7 +38,7 @@ function Login() {
               <Form.Control
                 className="mb-1 emailpw"
                 placeholder="USERNAME"
-                type="email"
+                type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -49,7 +54,6 @@ function Login() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
-            {/* Use Button component or standard button element for submit */}
             <Button
               variant="primary"
               type="submit"
@@ -61,7 +65,6 @@ function Login() {
           </Form>
         </div>
       </div>
-    </div>
     </div>
   );
 }
